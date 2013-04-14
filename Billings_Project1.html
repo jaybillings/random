@@ -16,90 +16,121 @@
    <title>Zillow Coding Question 1 - Jessica Billings</title>
    <style type="text/css">
       html {
-         background: #fff;
+         background: #E5EEFF;
          font: 100% "Trebuchet MS", Verdana, sans-serif;
          margin: 0;
          padding: 0;
       }
       h1 {
-         font-size: 1.5em;
+         font-size: 1.7em;
+         padding: 0;
+         margin: 0 0 0 10px;
       }
       h2 {
-         font-size: 1.2em;
+         font-size: 1.4em;
+         padding: 5px 0 0;
+         margin: 0;
       }
-      div#column-left {
+      div#header {
+         padding: 15px 10px;
+         color: #E5EEFF;
+         background: #4C5D7F;
+         border-bottom: 2px solid #E5EEFF;
+      }
+      div#header h1 {
+         text-transform: uppercase;
+      }
+      p#subtitle {
+         margin: 0 20px;
+         padding: 5px;
+         font-style: italic;
+      }
+      div#left-container {
          position: absolute;
          left: 0;
-         width: 180px;
          height: 100%;
+      }
+      div#column-left {
+         width: 180px;
          margin: 0 10px;
-         padding: 20px 10px 5px;
-         background-color: red;
+         padding: 5px 10px 5px;
+         background-color: #7A96CC;
+         border: 1px dotted black;
+      }
+      div#center-container {
+         position: absolute;
+         height: 100%;
       }
       div#column-center {
-         position: absolute;
-         height: 100%;
-         margin: 0 230px 0 200px;
+         margin: 0 233px 0 205px;
          padding: 5px 20px;
-         background-color: green;
+         background: #E5EEFF
       }
-      div#column-right {
+      div#right-container {
          position: absolute;
          right: 0;
-         width: 200px;
          height: 100%;
-         margin: 0 10px;
-         padding: 20px 10px 5px;
-         background-color: yellow;
       }
-      div#right-content {
+      div#column-right {
+         width: 200px;
+         margin: 0 10px;
+         padding: 5px 10px 5px;
+         background-color: #7A96CC;
+         border: 1px dotted black;
       }
    </style>
 </head>
 <body>
+   <div id="header">
+      <h1>Super Blog!</h1>
+      <p id="subtitle">The best blog in the universe.</p>
+   </div>
    <div id="content">
-      <div id="column-center">
-         <h1>Super Blog!</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            sapien ipsum, molestie id dignissim vitae, aliquam vitae arcu.
-            Vestibulum fringilla odio et leo auctor at malesuada massa commodo.
-            Donec ac tempor libero. Pellentesque a lorem sed elit hendrerit feugiat
-            eget et augue. Vivamus eu sem lorem. Ut suscipit blandit gravida. Donec
-            sit amet sagittis neque. Curabitur sit amet magna sit amet ante
-            venenatis facilisis. Quisque quis tellus ante, non lobortis neque.
-            Proin quis lorem quis lectus molestie ullamcorper ac in eros. Sed in
-            ipsum sit amet turpis cursus rutrum.</p>
-         <p>Nunc blandit lorem iaculis mauris vestibulum a tristique odio gravida.
-            In urna purus, gravida ut mollis sit amet, viverra sit amet sem. Donec
-            molestie velit quis velit mollis sed mattis nunc varius. Maecenas
-            imperdiet massa non orci blandit vel dignissim nisi egestas. Duis tempor
-            ipsum pulvinar nunc scelerisque ac scelerisque velit gravida. Maecenas
-            laoreet porttitor ante nec venenatis. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia Curae; Integer blandit
-            elit nec augue rhoncus mollis eleifend nunc vehicula. In hac habitasse
-            platea dictumst. Suspendisse ac nisi ante, at faucibus erat.</p>
-         <p>Etiam nibh nisi, vulputate at tristique nec, malesuada non nisi. Donec
-            laoreet venenatis urna, id blandit ante molestie et. Curabitur a arcu
-            nec leo congue rutrum vel ultricies risus. Proin nisl libero, sodales
-            sed laoreet nec, vehicula vitae eros. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Donec tempor
-            felis sed est fermentum vehicula. Cras eros metus, placerat eget
-            malesuada nec, pretium a quam. Aliquam vel diam ante. Praesent lacinia
-            commodo dui et pellentesque. Nam blandit tortor quis metus pulvinar
-            quis suscipit felis mattis. Morbi at elit nisi, eget placerat dolor.</p>
+      <div id="left-container">
+         <div id="column-left">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit
+               massa quis eros interdum in ultricies dolor rhoncus. Aliquam erat
+               volutpat. Aliquam accumsan enim euismod nisl mattis viverra id et
+               felis. Praesent malesuada tempor malesuada. Donec ullamcorper erat
+               volutpat tortor adipiscing feugiat. Sed aliquet, est eu rhoncus tempus,
+               elit massa tristique velit, vel aliquam lectus urna vitae felis. In hac
+               habitasse platea dictumst.</p>
+         </div>
       </div>
-            <div id="column-left">
-         <h2>About Me</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit
-            massa quis eros interdum in ultricies dolor rhoncus. Aliquam erat
-            volutpat. Aliquam accumsan enim euismod nisl mattis viverra id et
-            felis. Praesent malesuada tempor malesuada. Donec ullamcorper erat
-            volutpat tortor adipiscing feugiat. Sed aliquet, est eu rhoncus tempus,
-            elit massa tristique velit, vel aliquam lectus urna vitae felis. In hac
-            habitasse platea dictumst.</p>
+      <div id="center-container">
+         <div id="column-center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+               sapien ipsum, molestie id dignissim vitae, aliquam vitae arcu.
+               Vestibulum fringilla odio et leo auctor at malesuada massa commodo.
+               Donec ac tempor libero. Pellentesque a lorem sed elit hendrerit feugiat
+               eget et augue. Vivamus eu sem lorem. Ut suscipit blandit gravida. Donec
+               sit amet sagittis neque. Curabitur sit amet magna sit amet ante
+               venenatis facilisis. Quisque quis tellus ante, non lobortis neque.
+               Proin quis lorem quis lectus molestie ullamcorper ac in eros. Sed in
+               ipsum sit amet turpis cursus rutrum.</p>
+            <p>Nunc blandit lorem iaculis mauris vestibulum a tristique odio gravida.
+               In urna purus, gravida ut mollis sit amet, viverra sit amet sem. Donec
+               molestie velit quis velit mollis sed mattis nunc varius. Maecenas
+               imperdiet massa non orci blandit vel dignissim nisi egestas. Duis tempor
+               ipsum pulvinar nunc scelerisque ac scelerisque velit gravida. Maecenas
+               laoreet porttitor ante nec venenatis. Vestibulum ante ipsum primis in
+               faucibus orci luctus et ultrices posuere cubilia Curae; Integer blandit
+               elit nec augue rhoncus mollis eleifend nunc vehicula. In hac habitasse
+               platea dictumst. Suspendisse ac nisi ante, at faucibus erat.</p>
+            <p>Etiam nibh nisi, vulputate at tristique nec, malesuada non nisi. Donec
+               laoreet venenatis urna, id blandit ante molestie et. Curabitur a arcu
+               nec leo congue rutrum vel ultricies risus. Proin nisl libero, sodales
+               sed laoreet nec, vehicula vitae eros. Cum sociis natoque penatibus et
+               magnis dis parturient montes, nascetur ridiculus mus. Donec tempor
+               felis sed est fermentum vehicula. Cras eros metus, placerat eget
+               malesuada nec, pretium a quam. Aliquam vel diam ante. Praesent lacinia
+               commodo dui et pellentesque. Nam blandit tortor quis metus pulvinar
+               quis suscipit felis mattis. Morbi at elit nisi, eget placerat dolor.</p>
+         </div>
       </div>
-      <div id="column-right">
-         <div id="right-content">
+      <div id="right-container">
+         <div id="column-right">
             <h2>Helpful Links</h2>
             <ul>
                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
