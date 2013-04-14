@@ -1,0 +1,178 @@
+<!-- Write HTML, CSS, and JavaScript code to implement a short drop-down menu.
+     The main menu should be a drop-down with 5 menu items; when the user mouses
+     over one of the menu items, a second drop-down submenu should pop out to
+     the right of the main menu. -->
+<!-- No particular browser was specified to support. I tested this for Chrome
+     and Firefox. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>Zillow Coding Question #2 - Jessica Billings</title>
+   <style type="text/css">
+      html {
+         background: #fff;
+         font: 16px "Trebuchet MS", Verdana, sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+      h1 {
+         font-size: 1.5em;
+         margin: 0;
+         padding: 5px;
+         text-transform: uppercase;
+         text-align: center;
+      }
+      h2 {
+         font-size: 1.2em;
+         margin: 5px 0;
+         padding: 2px;
+         cursor: pointer;
+      }
+      ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+      div#header {
+         float: left;
+         margin: 5px 10px;
+         padding: 10px 15px;
+         background: #eee;
+         border: 2px solid black;
+         text-align: center;
+      }
+      ul#main-menu {
+         display: none;
+         border: 1px dotted black;
+         padding: 5px;
+         background: #ccc;
+      }
+      ul#main-menu li {
+         padding: 5px 5px 10px;
+         position: relative;
+      }
+      ul#main-menu li:hover {
+         color: blue;
+      }
+      ul.sub-menu {
+         display: none;
+         z-index: 99;
+         position: absolute;
+         left: 95px;
+         top: 5px;
+         background: gray;
+         border: 1px solid black;
+         text-align: left;
+      }
+      ul.sub-menu li {
+         margin: 5px 10px;
+         padding: 0 5px;
+         width: 60px;
+         color: black;
+         text-align: center;
+      }
+      ul.sub-menu li a {
+         text-decoration: none;
+         color: inherit;
+      }
+   </style>
+   <script type="text/javascript">
+   window.onload=function() {
+      var menuTrigger = document.getElementById("nav");
+      var menu = document.getElementById("main-menu");
+      var subMenuTriggers = document.getElementsByClassName("menu-item");
+
+      // Display the main menu
+      menuTrigger.onmouseover=function() {
+         menu.style.display = "block";
+      };
+      menuTrigger.onmouseout=function() {
+         menu.style.display = "none";
+      };
+
+      // Display sub menus
+      for (var x = 0; x < subMenuTriggers.length; x++) {
+         subMenuTriggers[x].onmouseover=function() {
+            this.childNodes[1].style.display = "block";
+         };
+         subMenuTriggers[x].onmouseout=function() {
+            this.childNodes[1].style.display = "none";
+         };
+      }
+   };
+   </script>
+</head>
+<body>
+   <div id="header">
+      <div id="title">
+         <h1>Super App</h1>
+      </div>
+      <div id="nav">
+         <h2>Main Menu</h2>
+         <ul id="main-menu">
+            <li class="menu-item">Item #1
+               <ul id="sub-menu1" class="sub-menu">
+                  <li><a href="#">Item 1.1</a></li>
+                  <li><a href="#">Item 1.2</a></li>
+               </ul>
+            </li>
+            <li class="menu-item">Item #2
+               <ul id="sub-menu2" class="sub-menu">
+                  <li><a href="#">Item 2.1</a></li>
+                  <li><a href="#">Item 2.2</a></li>
+               </ul>
+            </li>
+            <li class="menu-item">Item #3
+               <ul id="sub-menu3" class="sub-menu">
+                  <li><a href="#">Item 3.1</a></li>
+                  <li><a href="#">Item 3.2</a></li>
+               </ul>
+            </li>
+            <li class="menu-item">Item #4
+               <ul id="sub-menu4" class="sub-menu">
+                  <li><a href="#">Item 4.1</a></li>
+                  <li><a href="#">Item 4.2</a></li>
+               </ul>
+            </li>
+            <li class="menu-item">Item #5
+               <ul id="sub-menu5" class="sub-menu">
+                  <li><a href="#">Item 5.1</a></li>
+                  <li><a href="#">Item 5.2</a></li>
+               </ul>
+            </li>
+         </ul>
+      </div>
+   </div>
+   <div id="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            sapien ipsum, molestie id dignissim vitae, aliquam vitae arcu.
+            Vestibulum fringilla odio et leo auctor at malesuada massa commodo.
+            Donec ac tempor libero. Pellentesque a lorem sed elit hendrerit feugiat
+            eget et augue. Vivamus eu sem lorem. Ut suscipit blandit gravida. Donec
+            sit amet sagittis neque. Curabitur sit amet magna sit amet ante
+            venenatis facilisis. Quisque quis tellus ante, non lobortis neque.
+            Proin quis lorem quis lectus molestie ullamcorper ac in eros. Sed in
+            ipsum sit amet turpis cursus rutrum.</p>
+         <p>Nunc blandit lorem iaculis mauris vestibulum a tristique odio gravida.
+            In urna purus, gravida ut mollis sit amet, viverra sit amet sem. Donec
+            molestie velit quis velit mollis sed mattis nunc varius. Maecenas
+            imperdiet massa non orci blandit vel dignissim nisi egestas. Duis tempor
+            ipsum pulvinar nunc scelerisque ac scelerisque velit gravida. Maecenas
+            laoreet porttitor ante nec venenatis. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Integer blandit
+            elit nec augue rhoncus mollis eleifend nunc vehicula. In hac habitasse
+            platea dictumst. Suspendisse ac nisi ante, at faucibus erat.</p>
+         <p>Etiam nibh nisi, vulputate at tristique nec, malesuada non nisi. Donec
+            laoreet venenatis urna, id blandit ante molestie et. Curabitur a arcu
+            nec leo congue rutrum vel ultricies risus. Proin nisl libero, sodales
+            sed laoreet nec, vehicula vitae eros. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. Donec tempor
+            felis sed est fermentum vehicula. Cras eros metus, placerat eget
+            malesuada nec, pretium a quam. Aliquam vel diam ante. Praesent lacinia
+            commodo dui et pellentesque. Nam blandit tortor quis metus pulvinar
+            quis suscipit felis mattis. Morbi at elit nisi, eget placerat dolor.</p>
+   </div>
+</body>
+</html>

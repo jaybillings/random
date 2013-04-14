@@ -1,0 +1,115 @@
+<!-- Using valid HTML and CSS, create a document with three-column layout.
+     The left and right columns are fixed width, 180px and 200px respectively,
+     and the middle column is liquid, expanding to fill the available space.
+     Ensure that this code works in the top 3 browsers by market share. -->
+<!-- Browsers by market share do not include browser versions, so I used the
+     following charts and combined the results:
+     http://marketshare.hitslink.com/browser-market-share.aspx?qprid=2&qpcustomd=0
+     http://marketshare.hitslink.com/browser-market-share.aspx?qprid=0&qpcustomd=0
+     This informed my decision to support/test for IE9 and IE8
+     (representing "IE"), Firefox, and Chrome. -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>Zillow Coding Question 1 - Jessica Billings</title>
+   <style type="text/css">
+      html {
+         background: #fff;
+         font: 100% "Trebuchet MS", Verdana, sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+      h1 {
+         font-size: 1.5em;
+      }
+      h2 {
+         font-size: 1.2em;
+      }
+      div#column-left {
+         position: absolute;
+         left: 0;
+         width: 180px;
+         height: 100%;
+         margin: 0 10px;
+         padding: 20px 10px 5px;
+         background-color: red;
+      }
+      div#column-center {
+         position: absolute;
+         height: 100%;
+         margin: 0 230px 0 200px;
+         padding: 5px 20px;
+         background-color: green;
+      }
+      div#column-right {
+         position: absolute;
+         right: 0;
+         width: 200px;
+         height: 100%;
+         margin: 0 10px;
+         padding: 20px 10px 5px;
+         background-color: yellow;
+      }
+      div#right-content {
+      }
+   </style>
+</head>
+<body>
+   <div id="content">
+      <div id="column-center">
+         <h1>Super Blog!</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            sapien ipsum, molestie id dignissim vitae, aliquam vitae arcu.
+            Vestibulum fringilla odio et leo auctor at malesuada massa commodo.
+            Donec ac tempor libero. Pellentesque a lorem sed elit hendrerit feugiat
+            eget et augue. Vivamus eu sem lorem. Ut suscipit blandit gravida. Donec
+            sit amet sagittis neque. Curabitur sit amet magna sit amet ante
+            venenatis facilisis. Quisque quis tellus ante, non lobortis neque.
+            Proin quis lorem quis lectus molestie ullamcorper ac in eros. Sed in
+            ipsum sit amet turpis cursus rutrum.</p>
+         <p>Nunc blandit lorem iaculis mauris vestibulum a tristique odio gravida.
+            In urna purus, gravida ut mollis sit amet, viverra sit amet sem. Donec
+            molestie velit quis velit mollis sed mattis nunc varius. Maecenas
+            imperdiet massa non orci blandit vel dignissim nisi egestas. Duis tempor
+            ipsum pulvinar nunc scelerisque ac scelerisque velit gravida. Maecenas
+            laoreet porttitor ante nec venenatis. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Integer blandit
+            elit nec augue rhoncus mollis eleifend nunc vehicula. In hac habitasse
+            platea dictumst. Suspendisse ac nisi ante, at faucibus erat.</p>
+         <p>Etiam nibh nisi, vulputate at tristique nec, malesuada non nisi. Donec
+            laoreet venenatis urna, id blandit ante molestie et. Curabitur a arcu
+            nec leo congue rutrum vel ultricies risus. Proin nisl libero, sodales
+            sed laoreet nec, vehicula vitae eros. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. Donec tempor
+            felis sed est fermentum vehicula. Cras eros metus, placerat eget
+            malesuada nec, pretium a quam. Aliquam vel diam ante. Praesent lacinia
+            commodo dui et pellentesque. Nam blandit tortor quis metus pulvinar
+            quis suscipit felis mattis. Morbi at elit nisi, eget placerat dolor.</p>
+      </div>
+            <div id="column-left">
+         <h2>About Me</h2>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit
+            massa quis eros interdum in ultricies dolor rhoncus. Aliquam erat
+            volutpat. Aliquam accumsan enim euismod nisl mattis viverra id et
+            felis. Praesent malesuada tempor malesuada. Donec ullamcorper erat
+            volutpat tortor adipiscing feugiat. Sed aliquet, est eu rhoncus tempus,
+            elit massa tristique velit, vel aliquam lectus urna vitae felis. In hac
+            habitasse platea dictumst.</p>
+      </div>
+      <div id="column-right">
+         <div id="right-content">
+            <h2>Helpful Links</h2>
+            <ul>
+               <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+               <li>Etiam adipiscing volutpat dolor, sed adipiscing odio hendrerit ut.</li>
+               <li>Nulla eget sem quis nibh pretium mattis.</li>
+               <li>Fusce et neque risus, ac rutrum odio.</li>
+               <li>Sed a odio mattis felis aliquam interdum nec ut sapien.</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
